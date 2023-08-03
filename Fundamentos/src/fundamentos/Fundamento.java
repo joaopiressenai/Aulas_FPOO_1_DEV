@@ -1,4 +1,4 @@
-package fundamento;
+package fundamentos;
 
 public class Fundamento {
 
