@@ -12,19 +12,20 @@ public class Carro {
     // Declaração dos atributos da Classe, são as característicass da bicicleta
     private String marca;
     private String modelo;
-    private String cor;
+    private CorEnum cor;
     private int ano;
     private boolean temFreio;
     private int qtdeRodas;
     private String situacao;
     private int velocidade;
+    private int marcha;
     
     // construtor sem argumentos
     public Carro() {
     }
 
     // construtor com argumentos
-    public Carro(String marca, String modelo, String cor, int ano, boolean temFreio, int qtdeRodas) {
+    public Carro(String marca, String modelo, CorEnum cor, int ano, boolean temFreio, int qtdeRodas, int marcha) {
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
@@ -33,6 +34,7 @@ public class Carro {
         this.qtdeRodas = qtdeRodas;
         this.situacao = "Parado";
         this.velocidade = 0;
+        this.marcha = marcha;
     }
     
     // metodos (ações)
@@ -48,12 +50,24 @@ public class Carro {
     
     public boolean vericarTemFreio() {
         return this.temFreio;
-    }  
+    }
+    
+    public void trocarDeMarcha(MarchaEnum novaMarcha) {
+        int diferenca = novaMarcha.getNumeroMarcha() - this.marcha;
+        if (diferenca == 1) {
+            this.marcha = novaMarcha.getNumeroMarcha();
+        } else {
+            System.out.println("Voce nao pode pular a marcha");
+        }
+        
+    }
 
     @Override
     public String toString() {
-        return "Carro{" + "marca=" + marca + ", modelo=" + modelo + ", cor=" + cor + ", ano=" + ano + ", temFreio=" + temFreio + ", qtdeRodas=" + qtdeRodas + ", situacao=" + situacao + ", velocidade=" + velocidade + '}';
+        return "Carro{" + "marca=" + marca + ", modelo=" + modelo + ", cor=" + cor + ", ano=" + ano + ", temFreio=" + temFreio + ", qtdeRodas=" + qtdeRodas + ", marcha=" + marcha + '}';
     }
+
+    
     
     
 }
