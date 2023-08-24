@@ -4,6 +4,8 @@
  */
 package classes;
 
+import classes.Atividades.Aluno;
+
 /**
  *
  * @author Aluno
