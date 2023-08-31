@@ -40,20 +40,25 @@ public class Post implements ClassificacaoPost{
     public int darLike() {
         return this.like += 1;
     }
-    
-    public String comum() {
-        System.out.println(UMA_ESTRELA);
+
+    @Override
+    public int comum(int qtdeEstrelas) {
+        System.out.println("O post obeteve " + qtdeEstrelas + " e foi classificado como comum");
         return UMA_ESTRELA;
     }
-    
-    public String legal() {
-        System.out.println(TRES_ESTRELAS);
+
+    @Override
+    public int legal(int qtdeEstrelas) {
+        System.out.println("O post obeteve " + qtdeEstrelas + " e foi classificado como comum");
         return TRES_ESTRELAS;
     }
-    
-    public String superLegal() {
-        System.out.println(CINCO_ESTRELAS);
+
+    @Override
+    public int superLegal(int qtdeEstrelas) {
+        System.out.println("O post obeteve " + qtdeEstrelas + " e foi classificado como comum");
         return CINCO_ESTRELAS;
     }
+
+    
         
 }

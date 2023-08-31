@@ -8,8 +8,12 @@ package orientacaoObjetos;
  *
  * @author Aluno
  */
-public interface ClassificacaoPost {
-    String UMA_ESTRELA = "Post obteve 1 estrelas e representa um post comum";
-    String TRES_ESTRELAS = "Post obteve 3 estrelas e representa um post legal";
-    String CINCO_ESTRELAS = "Post obteve 5 estrelas e representa um post super legal";
+public interface ClassificacaoPost {   
+    int UMA_ESTRELA = 1;
+    int TRES_ESTRELAS = 3;
+    int CINCO_ESTRELAS = 5;
+    
+    public int comum(int qtdeEstrelas);
+    public int legal(int qtdeEstrelas);
+    public int superLegal(int qtdeEstrelas);
 }
