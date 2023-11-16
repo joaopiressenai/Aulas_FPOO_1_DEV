@@ -98,6 +98,14 @@ public class Aulas {
             .concat(" e muita ")
             .concat("saude".toUpperCase()));
         System.out.println(niver);
+        
+//        Revisão aula passada
+    String escola = "Senai Mario Henrique Simonse";
+        int idadeSenai = 41;
+        String mensagem2 = String.format("A escola %s tem %d anos desde sua criação", escola, idadeSenai);
+        
+        System.out.println(escola.length());
+        System.out.println(mensagem);
     }
     
 }
